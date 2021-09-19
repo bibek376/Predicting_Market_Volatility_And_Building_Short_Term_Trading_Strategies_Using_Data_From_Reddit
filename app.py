@@ -31,13 +31,12 @@ def predict():
         4.close
         5.volume
         6.cont_len
-        7.cont_pol
-        8.date_year
-        9.date_month
-        10.date_day
-        11.sent_negative
-        12.sent_neutral
-        13.sent_positive
+        7.date_year
+        8.date_month
+        9.date_day
+        10.sent_negative
+        11.sent_neutral
+        12.sent_positive
         '''
         # syntax-->     var_name=request.form['<name which in present in html form(index.html)>']
         query_open=request.form['open']
@@ -47,7 +46,7 @@ def predict():
         query_volume=request.form['volume']
         query_date= request.form['date']
         query_cont_len=request.form['cont_len']
-        query_cont_pol=request.form['cont_pol']
+        # query_cont_pol=request.form['cont_pol']
         query_cont_sent=request.form['cont_sent']
 
 
@@ -80,7 +79,6 @@ def predict():
                         query_close,
                         query_volume,
                         query_cont_len,
-                        query_cont_pol,
                         date_year,
                         date_month,
                         date_day,
