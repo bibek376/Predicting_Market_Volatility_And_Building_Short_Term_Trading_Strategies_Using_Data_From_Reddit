@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Forbitlab.au.dk%2Fwp-content%2Fuploads%2F2017%2F05%2Fmachinelearning2.jpg&f=1&nofb=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <div class="container-fluid">
+
+        <!-- Main input for machine learning model -->
+        <form action="/" method="POST">
+            <div class="row" style="padding-top:90px">
+                <div class="col-md-2"></div>
+                <div class="col-md-8" style="background-color:darkblue; opacity:0.85; padding:40px; border-radius:5px;">
+                    <div class="col-md" style="text-align:center; margin-top:-20px;">
+                        <h2 style="color: white; margin:20px auto; font-weight:bold;">
+                            Predicting-Market-Volatility-And-Building-Short-Term-Trading-Strategies-Using-Data-From-Reddit
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="form-label"></label>
+                            <input name="open" class="form-control" id="open" placeholder="Open Value">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label"></label>
+                            <input name="close" class="form-control" id="close" placeholder="Close Value">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label"></label>
+                            <input name="high" class="form-control" id="high" placeholder="High Value">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label"></label>
+                            <input name="low" class="form-control" id="low" placeholder="Low Value">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label"></label>
+                            <input name="volume" class="form-control" id="volume" placeholder="Volume">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label"></label>
+                            <input type="date" name="date" class="form-control" id="date" placeholder="Date">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="form-label"></label>
+                            <input name="cont_len" class="form-control" id="con_len" placeholder="Cont Len">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label"></label>
+                            <input name="cont_pol" class="form-control" id="cont_pol" placeholder="Cont pol">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label"></label>
+                            <select id="inputState" name="cont_sent" type="text" class="form-select">
+                                <option selected value="neutral">Neutral</option>
+                                <option value="positive">Positive</option>
+                                <option value="negative">Negative</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                    </div>
+                    <br>
+                    <!-- result from app.py file -->
+                    <div class="col-12">
+                        <p style="color: whitesmoke; background:black; border-radius:5px; padding: 10px; opacity: 0.9;">
+                            {{comment}}</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
